@@ -1,0 +1,298 @@
+/* Registration Page Container */
+.reg-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+/* Registration Form Card */
+.reg-form-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.reg-form-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Input Groups */
+.reg-input-group {
+  margin-bottom: 20px;
+}
+
+.reg-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.reg-input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.reg-input-group input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.reg-input-error {
+  border-color: #ff6b6b !important;
+}
+
+.reg-error-text {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Buttons */
+.reg-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.reg-submit-btn:hover {
+  background-color: #357ab8;
+}
+
+.reg-submitting-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #a0c4f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: not-allowed;
+  margin-top: 10px;
+}
+
+/* Success Message */
+.reg-success-message {
+  text-align: center;
+  padding: 20px;
+}
+
+.reg-success-message svg {
+  color: #4BB543;
+  margin-bottom: 15px;
+}
+
+.reg-success-message h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reg-success-message p {
+  color: #666;
+}
+
+/* Login Prompt */
+.reg-login-prompt {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.reg-login-prompt a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.reg-login-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Forgot Password Link */
+.reg-forgot-password {
+  text-align: right;
+  margin: -10px 0 15px 0;
+}
+
+.reg-forgot-password a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.reg-forgot-password a:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+/* Login Page Container */
+.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+}
+
+/* Login Form Card */
+.login-form-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-form-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Input Groups */
+.login-input-group {
+  margin-bottom: 20px;
+}
+
+.login-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.login-input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.login-input-group input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.login-input-error {
+  border-color: #ff6b6b !important;
+}
+
+.login-error-text {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Buttons */
+.login-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.login-submit-btn:hover {
+  background-color: #357ab8;
+}
+
+.login-submitting-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #a0c4f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: not-allowed;
+  margin-top: 10px;
+}
+
+/* Success Message */
+.login-success-message {
+  text-align: center;
+  padding: 20px;
+}
+
+.login-success-message svg {
+  color: #4BB543;
+  margin-bottom: 15px;
+}
+
+.login-success-message h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.login-success-message p {
+  color: #666;
+}
+
+/* Register Prompt */
+.login-register-prompt {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.login-register-prompt a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-register-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* Forgot Password Link */
+.login-forgot-password {
+  text-align: right;
+  margin: -10px 0 15px 0;
+}
+
+.login-forgot-password a {
+  color: #666;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-forgot-password a:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}

@@ -1,0 +1,91 @@
+/* Add these to your existing CSS */
+@layer components {
+  .card-highlight {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at var(--x) var(--y),
+      rgba(59, 130, 246, 0.1) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card-highlight:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Add cursor follow effect */
+.card-container {
+  position: relative;
+}
+
+/* Add this if you want the cards to tilt on mouse move */
+.card-tilt {
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+.contact-heading {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.heading-underline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  transform-origin: left center;
+  border-radius: 2px;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Optional: Add a subtle floating animation to the subtitle */
+.contact-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: rgba(52, 152, 219, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) scaleX(1); }
+  50% { transform: translateX(-50%) scaleX(1.2); }
+}
