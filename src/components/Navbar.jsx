@@ -47,9 +47,11 @@ const Navbar = () => {
               <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </Link>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all shadow-lg">
+                            <Link to="/join-movement" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                              <button className="bg-gradient-to-r cursor-pointer from-blue-500 to-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-blue-600 hover:to-purple-700 transition-all shadow-lg">
                 Join Us
               </button>
+                            </Link>
             </div>
           </div>
 

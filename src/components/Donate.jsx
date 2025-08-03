@@ -1,12 +1,30 @@
 import { motion } from 'framer-motion';
-import './styles.css';
+import { useNavigate } from 'react-router-dom';
 
-const DonateSection = () => {
-  const donationOptions = [
-    { amount: 10, description: "Supports basic needs for one person" },
-    { amount: 25, description: "Provides meals for a family" },
-    { amount: 50, description: "Helps fund educational programs" },
-    { amount: 100, description: "Sponsors a child's needs for a month" },
+const HelpCreatorPage = () => {
+  const navigate = useNavigate();
+  
+  const helpOptions = [
+    { 
+      title: "Join as Volunteer",
+      description: "Donate your time and skills to make a difference",
+      icon: "⏱️"
+    },
+    { 
+      title: "Share Resources", 
+      description: "Contribute goods or services to those in need",
+      icon: "🔄"
+    },
+    { 
+      title: "Spread Awareness", 
+      description: "Help us reach more people by sharing our mission",
+      icon: "📢"
+    },
+    { 
+      title: "Fundraise", 
+      description: "Start your own campaign to support our cause",
+      icon: "💰"
+    },
   ];
 
   const containerVariants = {
@@ -35,56 +53,89 @@ const DonateSection = () => {
     transition: { type: 'spring', stiffness: 300 }
   };
 
+  const handleJoinClick = () => {
+    navigate('/join-movement');
+  };
+
   return (
-    <section className="donate-section">
+    <section className="py-16 px-4 bg-gradient-to-b from-blue-50 to-white">
       <motion.div 
-        className="container"
+        className="max-w-6xl mx-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={containerVariants}
       >
-        <motion.h2 variants={itemVariants}>Make a Difference Today</motion.h2>
-        <motion.p className="subtitle" variants={itemVariants}>
-          Your donation helps us continue our mission and change lives.
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-6"
+          variants={itemVariants}
+        >
+          Become a Force for Good
+        </motion.h2>
+        
+        <motion.p 
+          className="text-xl text-center text-gray-600 max-w-3xl mx-auto mb-12"
+          variants={itemVariants}
+        >
+          Join our community of changemakers and help transform lives through your actions.
         </motion.p>
 
-        <div className="donation-options">
-          {donationOptions.map((option, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {helpOptions.map((option, index) => (
             <motion.div 
               key={index}
-              className="donation-card"
+              className="bg-white rounded-xl p-6 shadow-md border border-gray-100 flex flex-col items-center text-center"
               variants={itemVariants}
               whileHover={hoverEffect}
             >
-              <div className="amount">${option.amount}</div>
-              <p className="description">{option.description}</p>
+              <div className="text-4xl mb-4">{option.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">{option.title}</h3>
+              <p className="text-gray-600 mb-6 flex-grow">{option.description}</p>
               <motion.button
+                className="px-6 py-2 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleJoinClick}
               >
-                Donate Now
+                Get Started
               </motion.button>
             </motion.div>
           ))}
         </div>
 
-        <motion.div className="custom-donation" variants={itemVariants}>
-          <h3>Or enter a custom amount</h3>
-          <div className="input-group">
-            <span>$</span>
-            <input type="number" placeholder="Enter amount" />
+        <motion.div 
+          className="bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto"
+          variants={itemVariants}
+        >
+          <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">Ready to make an impact?</h3>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="relative flex-grow max-w-md">
+              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
+              <input 
+                type="number" 
+                placeholder="Enter donation amount" 
+                className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            
             <motion.button
+              className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors whitespace-nowrap"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={handleJoinClick}
             >
-              Continue
+              Join the Movement
             </motion.button>
           </div>
+          
+          <p className="text-center text-gray-500 mt-6">
+            Every contribution helps us build a better world together.
+          </p>
         </motion.div>
       </motion.div>
     </section>
   );
 };
 
-export default DonateSection;
+export default HelpCreatorPage;
